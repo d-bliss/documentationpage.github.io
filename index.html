@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>CSS Technical Documentation</title>
+        <meta charset="UTF-8" />
+        <meta
+        name="description"
+        content="Cascading Style Sheets Technical Documentation"
+        />
+        <meta name="keywords" content="CSS, Cascading Style Sheet, HTML" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="css-technical-documentation-project.css" />
+    </head>
+    <body class="dark-mode">
+        <nav id="navbar">
+            <header>CSS Documentation</header>
+            <ul>
+                <li>
+                    <a class="nav-link" href="#Introduction">Introduction</a>
+                </li>
+                <li>
+                    <a class="nav-link" href="#What_you_should_already_know"
+                    >What you should already know</a
+                    >
+                </li>
+                <li>
+                    <a class="nav-link" href="#What_is_CSS?">What is CSS?</a>
+                    <!--https://developer.mozilla.org/en-US/docs/Learn/CSS/First_steps/What_is_CSS-->
+                </li>
+
+                <li>
+                    <a class="nav-link" href="#CSS_Selectors">CSS Selectors</a>
+                </li>
+                <!--for above see https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks-->
+
+                <li>
+                    <a class="nav-link" href="#Applying_CSS">Applying CSS</a>
+                </li>
+                <!--https://developer.mozilla.org/en-US/docs/Learn/CSS/First_steps/How_CSS_is_structured-->
+
+                <li>
+                    <a class="nav-link" href="#CSS_Box_Model">CSS Box Model</a>
+                    <!--https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/The_box_model-->
+                </li>
+                <li><a class="nav-link" href="#CSS_Styling">CSS Styling</a></li>
+                <!--https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Media_queries-->
+                <li><a class="nav-link" href="#Reference">Reference</a></li>
+            </ul>
+        </nav>
+        <main id="main-doc">
+            <section class="main-section" id="Introduction">
+                <header id="first-header">Introduction</header>
+                <article>
+                    <p>
+                        Cascading Style Sheet or CSS for short is a language for
+                        specifying how documents are presented to users — how
+                        they are styled, and laid out.
+                    </p>
+                    <ul>
+                        <li>
+                            CSS can be used for very basic document text styling
+                            — for example, for changing the color and size of
+                            headings and links.
+                        </li>
+                        <li>
+                            It can be used to create a layout — for example,
+                            turning a single column of text into a layout with a
+                            main content area and a sidebar for related
+                            information.
+                        </li>
+                        <li>
+                            It can even be used for effects such as animation,
+                            and in many other creative ways.
+                        </li>
+                    </ul>
+                </article>
+            </section>
+            <section class="main-section" id="What_you_should_already_know">
+                <header>What you should already know</header>
+                <article>
+                    <p>
+                        This guide assumes you have the following basic
+                        background:
+                    </p>
+
+                    <ul>
+                        <li>
+                            A general understanding of the Internet, the World
+                            Wide Web (WWW), and basic computer literacy.
+                        </li>
+                        <li>
+                            Basic working knowledge of HyperText Markup Language
+                            (HTML), and computer files.
+                        </li>
+                    </ul>
+                </article>
+            </section>
+            <section class="main-section" id="What_is_CSS?">
+                <header>What is CSS?</header>
+                <article>
+                    <p>
+                        CSS is a language for specifying how documents are
+                        presented to users — how they are styled, laid out, etc.
+                        A document is usually a text file structured using a
+                        markup language like HTML. Presenting a document to a
+                        user means converting it into a form usable by your
+                        audience. Browsers, like Firefox, Chrome, or Edge, are
+                        designed to present documents visually, for example, on
+                        a computer screen, projector, or printer.
+                    </p>
+
+                    <p>
+                        CSS can be used for very basic document text styling —
+                        for example, for changing the color and size of headings
+                        and links. It can be used to create a layout — for
+                        example, turning a single column of text into a layout
+                        with a main content area and a sidebar for related
+                        information. It can even be used for effects such as
+                        animation.
+                    </p>
+                </article>
+            </section>
+            <section class="main-section" id="CSS_Selectors">
+                <header>CSS Selectors</header>
+                <article>
+                    <p>
+                        In CSS, selectors are used to target the HTML elements
+                        on our web pages that we want to style. There are a wide
+                        variety of CSS selectors available, allowing for
+                        fine-grained precision when selecting elements to style.
+                    </p>
+                    <h3>Types of selectors</h3>
+                    <p>
+                        There are a few different groupings of selectors, and
+                        knowing which type of selector you might need will help
+                        you to find the right tool for the job. See the type,
+                        class, and ID selector examples below.
+                    </p>
+                    <code>type { } </code>
+                    <code>.class { } </code>
+                    <code>#ID { } </code>
+
+                    <p>
+                        Keep in mind there are numerous other pseudo-classes,
+                        and pseudo-elements, along with many different ways to
+                        combine CSS selectors.
+                    </p>
+                </article>
+            </section>
+            <section class="main-section" id="Applying_CSS">
+                <header>Applying CSS</header>
+                <p>
+                    There are three methods of applying CSS to a document: with
+                    an external stylesheet, with an internal stylesheet, and
+                    with inline styles.
+                </p>
+                <h3>External stylesheet</h3>
+                <p>
+                    An external stylesheet contains CSS in a separate file with
+                    a .css extension. This is the most common and useful method
+                    of bringing CSS to a document. You reference an external CSS
+                    stylesheet from an HTML
+                    <code class="inline-code">&lt;link&gt;</code> element.
+
+                    <code>
+                        <span class="token doctype"
+                            ><span class="token punctuation">&lt;!</span
+                            ><span class="token doctype-tag">DOCTYPE</span>
+                            <span class="token name">html</span
+                            ><span class="token punctuation">&gt;</span></span
+                        >
+                        <span class="token tag"
+                            ><span class="token tag"
+                                ><span class="token punctuation">&lt;</span
+                                >html</span
+                            >
+                            <span class="token attr-name">lang</span
+                            ><span class="token attr-value"
+                                ><span class="token punctuation attr-equals"
+                                    >=</span
+                                ><span class="token punctuation">"</span
+                                >en-GB<span class="token punctuation"
+                                    >"</span
+                                ></span
+                            ><span class="token punctuation">&gt;</span></span
+                        >
+                        <span class="token tag"
+                            ><span class="token tag"
+                                ><span class="token punctuation">&lt;</span
+                                >head</span
+                            ><span class="token punctuation">&gt;</span></span
+                        >
+                        <span class="token tag"
+                            ><span class="token tag"
+                                ><span class="token punctuation">&lt;</span
+                                >meta</span
+                            >
+                            <span class="token attr-name">charset</span
+                            ><span class="token attr-value"
+                                ><span class="token punctuation attr-equals"
+                                    >=</span
+                                ><span class="token punctuation">"</span
+                                >utf-8<span class="token punctuation"
+                                    >"</span
+                                ></span
+                            ><span class="token punctuation">&gt;</span></span
+                        >
+                        <span class="token tag"
+                            ><span class="token tag"
+                                ><span class="token punctuation">&lt;</span
+                                >title</span
+                            ><span class="token punctuation">&gt;</span></span
+                        >My CSS experiment<span class="token tag"
+                            ><span class="token tag"
+                                ><span class="token punctuation">&lt;/</span
+                                >title</span
+                            ><span class="token punctuation">&gt;</span></span
+                        >
+                        <span class="token tag"
+                            ><span class="token tag"
+                                ><span class="token punctuation">&lt;</span
+                                >link</span
+                            >
+                            <span class="token attr-name">rel</span
+                            ><span class="token attr-value"
+                                ><span class="token punctuation attr-equals"
+                                    >=</span
+                                ><span class="token punctuation">"</span
+                                >stylesheet<span class="token punctuation"
+                                    >"</span
+                                ></span
+                            >
+                            <span class="token attr-name">href</span
+                            ><span class="token attr-value"
+                                ><span class="token punctuation attr-equals"
+                                    >=</span
+                                ><span class="token punctuation">"</span
+                                >styles.css<span class="token punctuation"
+                                    >"</span
+                                ></span
+                            ><span class="token punctuation">&gt;</span></span
+                        >
+                        <span class="token tag"
+                            ><span class="token tag"
+                                ><span class="token punctuation">&lt;/</span
+                                >head</span
+                            ><span class="token punctuation">&gt;</span></span
+                        >
+                        <span class="token tag"
+                            ><span class="token tag"
+                                ><span class="token punctuation">&lt;</span
+                                >body</span
+                            ><span class="token punctuation">&gt;</span></span
+                        >
+                        <span class="token tag"
+                            ><span class="token tag"
+                                ><span class="token punctuation">&lt;</span
+                                >h1</span
+                            ><span class="token punctuation">&gt;</span></span
+                        >Hello World!<span class="token tag"
+                            ><span class="token tag"
+                                ><span class="token punctuation">&lt;/</span
+                                >h1</span
+                            ><span class="token punctuation">&gt;</span></span
+                        >
+                        <span class="token tag"
+                            ><span class="token tag"
+                                ><span class="token punctuation">&lt;</span
+                                >p</span
+                            ><span class="token punctuation">&gt;</span></span
+                        >This is my first CSS example<span class="token tag"
+                            ><span class="token tag"
+                                ><span class="token punctuation">&lt;/</span
+                                >p</span
+                            ><span class="token punctuation">&gt;</span></span
+                        >
+                        <span class="token tag"
+                            ><span class="token tag"
+                                ><span class="token punctuation">&lt;/</span
+                                >body</span
+                            ><span class="token punctuation">&gt;</span></span
+                        >
+                        <span class="token tag"
+                            ><span class="token tag"
+                                ><span class="token punctuation">&lt;/</span
+                                >html</span
+                            ><span class="token punctuation">&gt;</span></span
+                        >
+                    </code>
+                </p>
+
+                <h3>Internal stylesheet</h3>
+                <p>
+                    An internal stylesheet resides within an HTML document. To
+                    create an internal stylesheet, you place CSS inside a
+                    <code class="inline-code">&lt;style&gt;</code> element
+                    contained inside the HTML
+                    <code class="inline-code">&lt;head&gt;</code> element.
+                </p>
+                <p>The HTML for an internal stylesheet might look like this:</p>
+                <code
+                    ><span class="token doctype"
+                        ><span class="token punctuation">&lt;!</span
+                        ><span class="token doctype-tag">DOCTYPE</span>
+                        <span class="token name">html</span
+                        ><span class="token punctuation">&gt;</span></span
+                    >
+                    <span class="token tag"
+                        ><span class="token tag"
+                            ><span class="token punctuation">&lt;</span
+                            >html</span
+                        >
+                        <span class="token attr-name">lang</span
+                        ><span class="token attr-value"
+                            ><span class="token punctuation attr-equals">=</span
+                            ><span class="token punctuation">"</span>en-GB<span
+                                class="token punctuation"
+                                >"</span
+                            ></span
+                        ><span class="token punctuation">&gt;</span></span
+                    >
+                    <span class="token tag"
+                        ><span class="token tag"
+                            ><span class="token punctuation">&lt;</span
+                            >head</span
+                        ><span class="token punctuation">&gt;</span></span
+                    >
+                    <span class="token tag"
+                        ><span class="token tag"
+                            ><span class="token punctuation">&lt;</span
+                            >meta</span
+                        >
+                        <span class="token attr-name">charset</span
+                        ><span class="token attr-value"
+                            ><span class="token punctuation attr-equals">=</span
+                            ><span class="token punctuation">"</span>utf-8<span
+                                class="token punctuation"
+                                >"</span
+                            ></span
+                        ><span class="token punctuation">&gt;</span></span
+                    >
+                    <span class="token tag"
+                        ><span class="token tag"
+                            ><span class="token punctuation">&lt;</span
+                            >title</span
+                        ><span class="token punctuation">&gt;</span></span
+                    >My CSS experiment<span class="token tag"
+                        ><span class="token tag"
+                            ><span class="token punctuation">&lt;/</span
+                            >title</span
+                        ><span class="token punctuation">&gt;</span></span
+                    >
+                    <span class="token tag"
+                        ><span class="token tag"
+                            ><span class="token punctuation">&lt;</span
+                            >style</span
+                        ><span class="token punctuation">&gt;</span></span
+                    ><span class="token style"
+                        ><span class="token language-css">
+                            <span class="token selector">h1</span>
+                            <span class="token punctuation">{</span>
+                            <span class="token property">color</span
+                            ><span class="token punctuation">:</span> blue<span
+                                class="token punctuation"
+                                >;</span
+                            >
+                            <span class="token property">background-color</span
+                            ><span class="token punctuation">:</span>
+                            yellow<span class="token punctuation">;</span>
+                            <span class="token property">border</span
+                            ><span class="token punctuation">:</span> 1px solid
+                            black<span class="token punctuation">;</span>
+                            <span class="token punctuation">}</span>
+
+                            <span class="token selector">p</span>
+                            <span class="token punctuation">{</span>
+                            <span class="token property">color</span
+                            ><span class="token punctuation">:</span> red<span
+                                class="token punctuation"
+                                >;</span
+                            >
+                            <span class="token punctuation">}</span>
+                        </span></span
+                    ><span class="token tag"
+                        ><span class="token tag"
+                            ><span class="token punctuation">&lt;/</span
+                            >style</span
+                        ><span class="token punctuation">&gt;</span></span
+                    >
+                    <span class="token tag"
+                        ><span class="token tag"
+                            ><span class="token punctuation">&lt;/</span
+                            >head</span
+                        ><span class="token punctuation">&gt;</span></span
+                    >
+                    <span class="token tag"
+                        ><span class="token tag"
+                            ><span class="token punctuation">&lt;</span
+                            >body</span
+                        ><span class="token punctuation">&gt;</span></span
+                    >
+                    <span class="token tag"
+                        ><span class="token tag"
+                            ><span class="token punctuation">&lt;</span>h1</span
+                        ><span class="token punctuation">&gt;</span></span
+                    >Hello World!<span class="token tag"
+                        ><span class="token tag"
+                            ><span class="token punctuation">&lt;/</span
+                            >h1</span
+                        ><span class="token punctuation">&gt;</span></span
+                    >
+                    <span class="token tag"
+                        ><span class="token tag"
+                            ><span class="token punctuation">&lt;</span>p</span
+                        ><span class="token punctuation">&gt;</span></span
+                    >This is my first CSS example<span class="token tag"
+                        ><span class="token tag"
+                            ><span class="token punctuation">&lt;/</span>p</span
+                        ><span class="token punctuation">&gt;</span></span
+                    >
+                    <span class="token tag"
+                        ><span class="token tag"
+                            ><span class="token punctuation">&lt;/</span
+                            >body</span
+                        ><span class="token punctuation">&gt;</span></span
+                    >
+                    <span class="token tag"
+                        ><span class="token tag"
+                            ><span class="token punctuation">&lt;/</span
+                            >html</span
+                        ><span class="token punctuation">&gt;</span></span
+                    >
+                </code>
+
+                <h3>Inline styles</h3>
+
+                <p>
+                    Inline styles are CSS declarations that affect a single HTML
+                    element, contained within a
+                    <span class="italic">style</span> attribute. The
+                    implementation of an inline style in an HTML document might
+                    look like this:
+                </p>
+
+                <code
+                    ><span class="token doctype"
+                        ><span class="token punctuation">&lt;!</span
+                        ><span class="token doctype-tag">DOCTYPE</span>
+                        <span class="token name">html</span
+                        ><span class="token punctuation">&gt;</span></span
+                    >
+                    <span class="token tag"
+                        ><span class="token tag"
+                            ><span class="token punctuation">&lt;</span
+                            >html</span
+                        >
+                        <span class="token attr-name">lang</span
+                        ><span class="token attr-value"
+                            ><span class="token punctuation attr-equals">=</span
+                            ><span class="token punctuation">"</span>en-GB<span
+                                class="token punctuation"
+                                >"</span
+                            ></span
+                        ><span class="token punctuation">&gt;</span></span
+                    >
+                    <span class="token tag"
+                        ><span class="token tag"
+                            ><span class="token punctuation">&lt;</span
+                            >head</span
+                        ><span class="token punctuation">&gt;</span></span
+                    >
+                    <span class="token tag"
+                        ><span class="token tag"
+                            ><span class="token punctuation">&lt;</span
+                            >meta</span
+                        >
+                        <span class="token attr-name">charset</span
+                        ><span class="token attr-value"
+                            ><span class="token punctuation attr-equals">=</span
+                            ><span class="token punctuation">"</span>utf-8<span
+                                class="token punctuation"
+                                >"</span
+                            ></span
+                        ><span class="token punctuation">&gt;</span></span
+                    >
+                    <span class="token tag"
+                        ><span class="token tag"
+                            ><span class="token punctuation">&lt;</span
+                            >title</span
+                        ><span class="token punctuation">&gt;</span></span
+                    >My CSS experiment<span class="token tag"
+                        ><span class="token tag"
+                            ><span class="token punctuation">&lt;/</span
+                            >title</span
+                        ><span class="token punctuation">&gt;</span></span
+                    >
+                    <span class="token tag"
+                        ><span class="token tag"
+                            ><span class="token punctuation">&lt;/</span
+                            >head</span
+                        ><span class="token punctuation">&gt;</span></span
+                    >
+                    <span class="token tag"
+                        ><span class="token tag"
+                            ><span class="token punctuation">&lt;</span
+                            >body</span
+                        ><span class="token punctuation">&gt;</span></span
+                    >
+                    <span class="token tag"
+                        ><span class="token tag"
+                            ><span class="token punctuation">&lt;</span>h1</span
+                        >
+                        <span class="token special-attr"
+                            ><span class="token attr-name"
+                                ><span class="italic">style</span></span
+                            ><span class="token attr-value"
+                                ><span class="token punctuation attr-equals"
+                                    >=</span
+                                ><span class="token punctuation">"</span
+                                ><span class="token value css language-css"
+                                    ><span class="token property">color</span
+                                    ><span class="token punctuation">:</span>
+                                    blue<span class="token punctuation">;</span
+                                    ><span class="token property"
+                                        >background-color</span
+                                    ><span class="token punctuation">:</span>
+                                    yellow<span class="token punctuation"
+                                        >;</span
+                                    ><span class="token property">border</span
+                                    ><span class="token punctuation">:</span>
+                                    1px solid black<span
+                                        class="token punctuation"
+                                        >;</span
+                                    ></span
+                                ><span class="token punctuation">"</span></span
+                            ></span
+                        ><span class="token punctuation">&gt;</span></span
+                    >Hello World!<span class="token tag"
+                        ><span class="token tag"
+                            ><span class="token punctuation">&lt;/</span
+                            >h1</span
+                        ><span class="token punctuation">&gt;</span></span
+                    >
+                    <span class="token tag"
+                        ><span class="token tag"
+                            ><span class="token punctuation">&lt;</span>p</span
+                        >
+                        <span class="token special-attr"
+                            ><span class="token attr-name"
+                                ><span class="italic">style</span></span
+                            ><span class="token attr-value"
+                                ><span class="token punctuation attr-equals"
+                                    >=</span
+                                ><span class="token punctuation">"</span
+                                ><span class="token value css language-css"
+                                    ><span class="token property">color</span
+                                    ><span class="token punctuation">:</span
+                                    >red<span class="token punctuation"
+                                        >;</span
+                                    ></span
+                                ><span class="token punctuation">"</span></span
+                            ></span
+                        ><span class="token punctuation">&gt;</span></span
+                    >This is my first CSS example<span class="token tag"
+                        ><span class="token tag"
+                            ><span class="token punctuation">&lt;/</span>p</span
+                        ><span class="token punctuation">&gt;</span></span
+                    >
+                    <span class="token tag"
+                        ><span class="token tag"
+                            ><span class="token punctuation">&lt;/</span
+                            >body</span
+                        ><span class="token punctuation">&gt;</span></span
+                    >
+                    <span class="token tag"
+                        ><span class="token tag"
+                            ><span class="token punctuation">&lt;/</span
+                            >html</span
+                        ><span class="token punctuation">&gt;</span></span
+                    >
+                </code>
+                <p>
+                    Avoid using CSS in this way, when possible. It is the
+                    opposite of a best practice.
+                </p>
+            </section>
+            <section class="main-section" id="CSS_Box_Model">
+                <header>CSS Box Model</header>
+                <article>
+                    Everything in CSS has a box around it, and understanding
+                    these boxes is key to being able to create more complex
+                    layouts with CSS, or to align items with other items.
+                    <p>
+                        Everything in CSS has a box around it, and understanding
+                        these boxes is key to being able to create more complex
+                        layouts with CSS, or to align items with other items.
+                    </p>
+                    <p>
+                        The CSS box model as a whole applies to block boxes and
+                        defines how the different parts of a box — margin,
+                        border, padding, and content — work together to create a
+                        box that you can see on a page. Inline boxes use just
+                        some of the behavior defined in the box model.
+                    </p>
+                    <h3>Use browser devtools to view the box model</h3>
+                    <p>
+                        Your browser developer tools can make understanding the
+                        box model far easier. If you inspect an element in
+                        Firefox's DevTools, you can see the size of the element
+                        plus its margin, padding, and border.
+                    </p>
+                    <img
+                        class="img"
+                        src="https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/The_box_model/box-model-devtools.png"
+                        alt="css box model example"
+                    />
+                </article>
+            </section>
+
+            <section class="main-section" id="CSS_Styling">
+                <header>CSS Styling</header>
+                <article>
+                    <!--make text, font and color sections & headings for styling-->
+                    <p>
+                        Styling text, font, and colors are some of the most
+                        common things you'll do with CSS. Some styling
+                        fundamentals include setting font, boldness, italics,
+                        line and letter spacing, drop shadows. It's also
+                        important to understand how to apply custom fonts to
+                        your page, along with styling lists and links.
+                    </p>
+                    <h3>Styling Text</h3>
+                    <!--update this with exapmples of styled text-->
+                    <p>
+                        When styline text with CSS we can make many adjustments
+                        to the way the text layout. For example, we can use
+                        properties like
+                        <code class="inline-code">text-align</code> to justify
+                        the text left, the right or center it.
+                    </p>
+                    <ul>
+                        <li>
+                            <code class="inline-code">text-align: left</code>
+                            :Left-justifies the text.
+                        </li>
+                        <li>
+                            <code class="inline-code">text-align: right</code>
+                            :Right-justifies the text.
+                        </li>
+                        <li>
+                            <code class="inline-code">text-align: center</code>
+                            :Centers the text.
+                        </li>
+                    </ul>
+                    <p>
+                        You can make similar adjustments to many other
+                        properties such as line height, font size, word spacing
+                        and many more.
+                    </p>
+
+                    <h3>Styling fonts and colors</h3>
+                    <p>
+                        With CSS you can easily change the color of any element
+                        including the text. There are seemingly endless examples
+                        of <code class="inline-code">color</code> and
+                        <code class="inline-code">font-family</code>
+                        combinations you can adjust. You can see some simple
+                        examples of below.
+                    </p>
+
+                    <code
+                        >body { background-color: white; } p { color: red; } p {
+                        font-family: arial; }
+                    </code>
+                    <p id="end-note">
+                        The documentation in this guide is only a primer please
+                        find further information at
+                        <a
+                            href="https://developer.mozilla.org/en-US/docs/Web/CSS/Cascade"
+                            >MDN.</a
+                        >
+                    </p>
+                </article>
+            </section>
+
+            <section class="main-section" id="Reference">
+                <header>Reference</header>
+                <article>
+                    <ul>
+                        <li>
+                            All the documentation in this page is taken from
+                            <a
+                                href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide"
+                                target="_blank"
+                                >MDN</a
+                            >
+                        </li>
+                    </ul>
+                </article>
+            </section>
+        </main>
+    </body>
+</html>
